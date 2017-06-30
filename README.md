@@ -1,4 +1,4 @@
-LineageOS Updater Backend
+Carbon Updater
 =======================
 Copyright (c) 2017 The LineageOS Project<br>
 
@@ -18,9 +18,9 @@ so limit this to around 25 characters.
 * `has_recovery`: (*optional*) whether or not the device has a separate recovery partition. Defaults to `true`.
 * `image`: (*optional*) the filename (excluding .png) of the device's image. Defaults to the value of `model`.
 * `wiki`: (*optional*) the name of the wiki page, excluding "\_info". Defaults to the value of `model`.
-For example, `i9300` would be shown on the website as a link to http://wiki.lineageos.org/devices/i9300
+For example, `i9300` would be shown on the website as a link to http://wiki.carbonrom.org/devices/i9300
 * `special_instructions_url`: (*optional*) a url with special instructions for a user to read before downloading. - 
-e.g. `http://wiki.lineageos.org/devices/i9300/install#installing-a-custom-recovery`. This will show in a lightbox on the
+e.g. `http://wiki.carbonrom.org/devices/i9300/install#installing-a-custom-recovery`. This will show in a lightbox on the
 device's download page.
 
 This file is no longer read from disk by the application and must be loaded into mongo. To do so, run: 
@@ -55,13 +55,13 @@ To add use `FLASK_APP=updater.app flask addrom [OPTIONS]`
 
 ```
 Options:
-  -f, --filename TEXT   [required] (Example: lineage-14.1-20170114-NIGHTLY-v500.zip)
-  -d, --device TEXT     [required] (Example: v500)
-  -v, --version TEXT    [required] (Example: 14.1)
-  -t, --datetime TEXT   [required] (Example: "2017-01-14 13:59:25")
-  -r, --romtype TEXT    [required] (Example: nightly)
+  -f, --filename TEXT   [required] (Example: CARBON-CR-5.1-MOO-WEEKLY-z3c-20170627-0512.zip)
+  -d, --device TEXT     [required] (Example: z3c)
+  -v, --version TEXT    [required] (Example: 5.1)
+  -t, --datetime TEXT   [required] (Example: "2017-06-27 05:12:41")
+  -r, --romtype TEXT    [required] (Example: WEEKLY)
   -m, --md5sum TEXT     [required] (Example: 0f80ec88915e8d02f13cfe83d05f4a05)
-  -u, --url TEXT        [required] (Example: https://mirrobits.lineageos.org/full/lineage-14.1-20170114-NIGHTLY-v500.zip)
+  -u, --url TEXT        [required] (Example: https://mirrorbits.carbonrom.org/z3c/CARBON-CR-5.1-MOO-WEEKLY-z3c-20170627-0512.zip)
   --help                Show this message and exit.
 ```
 
