@@ -1,5 +1,5 @@
 [gerrit]
-host=review.lineageos.org
-project=LineageOS/lineageos_updater
+host=review.carbonrom.org
+project=CarbonROM/Updater
 port=29418
 defaultbranch=master

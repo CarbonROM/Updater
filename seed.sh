@@ -7,11 +7,11 @@ for i in {0..99}; do
 rand=$[$RANDOM % 32]
 DEVICE=${DEVICES[$rand]}
 FILENAME=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
-VERSION=14.1
-DATETIME="2017-07-07"
-ROMTYPE="nightly"
+VERSION=5.1
+DATETIME="2017-07-04"
+ROMTYPE="WEEKLY"
 MD5SUM=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
-URL=https://mirrobits.lineageos.org/full/${DEVICE}/${DATETIME}/${FILENAME}
+URL=https://mirrorbits.carbonrom.org/${DEVICE}/${DATETIME}/${FILENAME}
 
 
 flask addrom --filename $FILENAME --device $DEVICE --version $VERSION --datetime $DATETIME --romtype $ROMTYPE --md5sum $MD5SUM --url $URL
